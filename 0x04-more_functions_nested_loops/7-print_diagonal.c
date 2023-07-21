@@ -1,23 +1,25 @@
 #include "main.h"
 
 /**
- * print_diagonal - print a diagonal line
- *
- * @n: is the number of times the / character
- *		should be printed
- */
+ * print_diagonal - function that prints diagonal line if n is positive
+ *		and '\n' otherwise
+ *@n: takes integer input
+*/
+
 void print_diagonal(int n)
 {
-	if (n <= 0)
-		_putchar('\n');
-	else
+	int i, j;
+
+	if (n > 0)
 	{
-		for (postn = 1; postn <= n; postn++)
+		for (i = 0; i < n; i++)
 		{
-			for (space = 1; space <= postn; space++)
+			for (j = 0; j < i; j++)
 				_putchar(' ');
-			_putchar(92); /**is equal to '/' char */
+			_putchar('\\');
 			_putchar('\n');
 		}
 	}
+	else
+	_putchar('\n');
 }
