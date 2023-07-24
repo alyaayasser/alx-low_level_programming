@@ -19,7 +19,7 @@ void print_rev(char *s)
 	for (o = longl; o > 0; o--)
 	{
 		_putchar(*s);
-		s--
+		s--;
 	}
-	_putchar('\n')
+	_putchar('\n');
 }
