@@ -14,17 +14,21 @@ char *_strncat(char *dest, char *src, int n)
 	int j;
 
 	i = 0;
-	while (dest[i] != '\0')
+
+	/*find the size of dest arrey*/
+	while (dest[i])
 	{
 		i++;
 	}
-	j = 0;
-	while (j < n && src[j] != '\0')
+	/**
+	 * src does not need to be null torminated
+	 * if it contains n or nore bytes
+	 */
+	for (j = 0; j < n && src[j] != '\0'; j++)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		dest[i + j] = src[j];
+		/*null terminate dest*/
 	}
-	dest[i] = '\0';
+	dest[i + j] = '\0';
 	return (dest);
 }
