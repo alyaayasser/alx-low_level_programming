@@ -43,4 +43,26 @@ int _atol(char *s)
 		return (0);
 	return (n);
 }
+/**
+ *main - multiplies two numbers
+ * @argc: number of argument
+ * @argv: arrey of argument
+ *
+ * Return: 0 (Success), 1 (Error)
+ */
+int main(int argc, char *argv[])
+{
+	int r, num1, num2;
 
+	if (argc < 3 || argc > 3)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	num1 = _atol(argv[1]);
+	num2 = _atol(argv[2]);
+	r = num1 * num2;
+	printf("%d\n", r);
+
+	return (0);
+}
