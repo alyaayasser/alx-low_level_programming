@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 int _putchar(char c);
-int _atol(char *s);
+int _atoi(char *s);
 int main(int argc, char *argv[]);
 
 #endif/* MAIN_H */
